@@ -1,4 +1,4 @@
-#发送的图片的品质，支持original,medium,small,thumb等
+#发送的图片的品质，支持["mini","original","regular","small","thumb"]
 quality='original'
 #是否保存随机图片到本地
 save=True
