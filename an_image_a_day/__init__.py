@@ -31,7 +31,7 @@ __plugin_settings__ = {
 #检查是否保存，如果保存则创建保存目录
 if config.save:
   try:
-      os.mkdir(config.dir)
+      os.mkdir(config.save_dir)
   except Exception as e:
       pass
 
@@ -59,7 +59,7 @@ async def animgaday(bot: Bot, ev: Event):
             )
         #保存图片
         if config.save:
-          open(f'./{config.dir}/'+str(datetime.date.today())+'.jpg','wb').write(img.content)
+          open(f'./{config.save_dir}/'+str(datetime.date.today())+'.jpg','wb').write(img.content)
     except Exception as e:
         logger.error('出现错误！')
         raise e
